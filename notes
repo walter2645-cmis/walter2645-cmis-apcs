@@ -1,0 +1,18 @@
+.class - compiled binary executable file
+.java - source file
+1 of them is the file itself, the other is one created by java to do stuff
+comments
+class signature
+class name
+class declaration / definition
+public static void main - method signature
+main -method name
+the entire main method - method declaration / definition
+method main the program starts with main and most programs need a main to begin from there, entry point to the program.
+semicolon ; ending a line of code, separating it from the next, marks the end of a statement
+statement
+expression
+expression
+expression
+statement
+block
