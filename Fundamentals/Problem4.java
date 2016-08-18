@@ -14,7 +14,7 @@ public class Problem4
         }//end for
         for( int num = 1; num <= 10; num++ )
         {
-            System.out.println(num + "\t" + square(num));
+            System.out.println(num + "\t" + square(num) + "\t" + (int)((double)(square(num) - num) * Math.random() + num));
         }//end for
     }//end method main
 }//end class Problem4
