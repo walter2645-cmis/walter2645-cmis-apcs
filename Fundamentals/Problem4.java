@@ -12,9 +12,9 @@ public class Problem4
         {
             range[ index ] = index + 1;
         }//end for
-        for( int num = 1; num <= 10; num++ )
+        for( int index = 0; index < range.length; index++ )
         {
-            System.out.println(num + "\t" + square(num) + "\t" + (int)((double)(square(num) - num) * Math.random() + num));
+            System.out.println(range[ index ] + "\t" + square(range[ index ]) + "\t" + (int)((double)(square(range[ index ]) - range[ index ]) * Math.random() + range[ index ]));
         }//end for
     }//end method main
 }//end class Problem4
