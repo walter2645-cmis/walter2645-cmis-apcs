@@ -6,7 +6,7 @@ public class Problem6
         for( int index = 0; index < fiddy.length; index++ )
         {
             double num = Math.random();
-            fiddy[ index ] = (int)(num * 100);
+            fiddy[ index ] = (int)(num * 101);
         }//end for
         for(int index = 0; index < fiddy.length; index++ )
         {

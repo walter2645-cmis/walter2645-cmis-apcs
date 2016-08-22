@@ -8,10 +8,10 @@ public class Problem3
         if ( num % 2 == 1 )
         {
             System.out.println(num + " is an odd number.");
-        }
+        }//end if
         else if ( num % 2 == 0 )
         {
             System.out.println(num + " is an even number.");
-        }
+        }//end else if
     }//end method main
 }//end class Problem3
