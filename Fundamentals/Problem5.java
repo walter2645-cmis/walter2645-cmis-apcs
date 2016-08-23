@@ -19,9 +19,11 @@ public class Problem5
             }
         }//end for
         System.out.println(" ");
-        for(int index = 0; index < songs.length; index++ )
+        int index = 0;
+        while( index < movies.length )
         {
             System.out.print(songs[ index ] + ", ");
-        }//end for
+            index++;
+        }//end while
     }//end method main
 }//end class Problem5

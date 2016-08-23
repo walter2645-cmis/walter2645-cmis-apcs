@@ -10,7 +10,7 @@ public class Problem8
         {
             System.out.println(notMJ[ index ]);
         }//end for
-        double slotamt = 1.0 / notMJ.length;
+        double slotamt = 10.0 / notMJ.length;
         notMJ[ (int)(Math.random() * slotamt) ] = "Michael Jackson";
         for( int index = 0; index < notMJ.length; index++ )
         {
@@ -18,7 +18,7 @@ public class Problem8
         }//end for
         for( int index = 0; index < notMJ.length; index++ )
         {
-            if( notMJ[ index ] == "Michael Jackson" )
+            if( notMJ[ index ].equals("Michael Jackson") )
             {
                 System.out.println("We found Michael!");
             }//end if
