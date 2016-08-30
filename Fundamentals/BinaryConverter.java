@@ -3,16 +3,15 @@ public class BinaryConverter
     public static void main(String[] args){
         
         //Testing bin2dec()
-        String bin1 = "101101";
+        String bin1 = "1000010110111010";
         int dec1 = bin2dec(bin1);
-        assert dec1 == 45;
+        assert dec1 == 34234;
         
         //Testing dec2bin();
         int dec2 = 34243;
         String bin2 = dec2bin(dec2);
         assert bin2.equals("1000010110111010");
     }//end method main
-    
     public static int bin2dec(String bin1){
         char binaryarray[] = bin1.toCharArray();
         int decimalvalue = 0;
@@ -37,11 +36,10 @@ public class BinaryConverter
                 decimalvalue += num;
             }//end else if
         }//end for
+        System.out.println(decimalvalue);
         return decimalvalue;
     }//end method bin2dec
-    
     public static String dec2bin(int dec){
         return "1000010110111010";
     }//end method dec2bin
-        
 }//end class BinaryConverter
