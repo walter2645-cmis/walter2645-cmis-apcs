@@ -3,13 +3,13 @@ public class BinaryConverter
     public static void main(String[] args){
         
         //Testing bin2dec()
-        String bin1 = "1000010110111010";
+        String bin1 = "1011101101001010111";
         int dec1 = bin2dec(bin1);
-        assert dec1 == 34234;
+        //assert dec1 == 34234;
         
         //Testing dec2bin();
-        int dec2 = 5;
-        String bin2 = dec2bin(dec2);
+        int dec2 = 5825875;
+        String bin2 = dec2bin(bin2dec(bin1));
         //assert bin2.equals("1000010110111010");
     }//end method main
     public static int bin2dec(String bin1){
@@ -36,7 +36,7 @@ public class BinaryConverter
                 decimalvalue += num;
             }//end else if
         }//end for
-        //System.out.println(decimalvalue);
+        System.out.println(decimalvalue);
         return decimalvalue;
     }//end method bin2dec
     public static String dec2bin(int dec){
@@ -48,18 +48,10 @@ public class BinaryConverter
             num = num * 2;
             length++;
         }//end while
-        if( dec <= 1 )
-        {
-            if( dec == 1 )
-            {
-                binary += "1";
-            }//end if
-            else if( dec == 0 )
-            {
-                binary += "0";
-            }//end else if
-        }//end if
-        else
+        int powerof = length;
+        int runtime = 0;
+        int q = 0;
+        while( dec >= 0 && q == 0 )
         {
             num = 1;
             while( length > 0 )
@@ -67,11 +59,33 @@ public class BinaryConverter
                 num = num * 2;
                 length--;
             }//end while
-            while( true)
+            if( binary.length() == powerof - 1 )
             {
-                
-            }//end while
-        }//end else
+                if ( dec == 1 )
+                {
+                    binary += "1";
+                    dec--;
+                    q--;
+                }
+                else if ( dec == 0 )
+                {
+                    binary += "0";
+                    dec--;
+                    q--;
+                }
+            }
+            else if( dec >= num )
+            {
+                binary += "1";
+                dec -= num;
+            }
+            else if( dec < num  && runtime != 0 )
+            {
+                binary += "0";
+            }
+            runtime++;
+            length = powerof - runtime;
+        }
         System.out.println(binary);
         return "1000010110111010";
     }//end method dec2bin
