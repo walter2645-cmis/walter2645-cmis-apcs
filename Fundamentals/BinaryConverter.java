@@ -66,27 +66,27 @@ public class BinaryConverter
                     binary += "1";
                     dec--;
                     q--;
-                }
+                }//end else if
                 else if ( dec == 0 )
                 {
                     binary += "0";
                     dec--;
                     q--;
-                }
-            }
+                }//end else if
+            }//end if
             else if( dec >= num )
             {
                 binary += "1";
                 dec -= num;
-            }
+            }//end else if
             else if( dec < num  && runtime != 0 )
             {
                 binary += "0";
-            }
+            }//end else if
             runtime++;
             length = powerof - runtime;
-        }
+        }//end while
         System.out.println(binary);
-        return "1000010110111010";
+        return binary;
     }//end method dec2bin
 }//end class BinaryConverter
