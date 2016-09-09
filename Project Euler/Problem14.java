@@ -2,14 +2,13 @@ public class Problem14
 {
     public static void main( String[] args )
     {
-        long num = 1l;
+        long num = 0l;
         long count = 1l;
-        long ans = 1l;
-        long res = 0l;
+        int ans = 2;
+        int res = 0;
         while( count < 1000000 )
         {
             long cal = num + count;
-            System.out.println(cal);
             while( cal > 1 )
             {
                 if( cal % 2 == 0 )
@@ -25,8 +24,9 @@ public class Problem14
             if( ans > res )
             {
                 res = ans;
+                System.out.println(count);
             }//end if
-            ans = 1;
+            ans = 2;
             count++;
         }//end while
         System.out.println(res);
