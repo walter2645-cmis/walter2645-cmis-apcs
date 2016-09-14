@@ -11,20 +11,7 @@ public class Problem3
             long divisible = num - count;
             if( num % divisible == 0 )
             {
-                System.out.println(divisible);
-                long primecheck = 2l;
-                while( primecheck < divisible )
-                {
-                    if( divisible % primecheck == 0 )
-                    {
-                        primecheck += divisible;
-                    }//end if
-                    else if( primecheck == divisible - 1 )
-                    {
-                        prime = false;
-                    }//end else if
-                    primecheck++;
-                }//end while
+                
             }//end if
             count++;
             res = divisible;
