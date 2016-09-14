@@ -5,9 +5,9 @@ public class Problem3
         long num = 600851475143l;
         boolean prime = true;
         long res = 0l;
+        long count = 0l;
         while( prime )
         {
-            long count = 0l;
             long divisible = num - count;
             if( num % divisible == 0 )
             {
@@ -21,7 +21,7 @@ public class Problem3
                     }//end if
                     else if( primecheck == divisible - 1 )
                     {
-                        prime = true;
+                        prime = false;
                     }//end else if
                     primecheck++;
                 }//end while
@@ -32,3 +32,4 @@ public class Problem3
         System.out.println(res);
     }//end method main
 }//end class Problem3
+//https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
