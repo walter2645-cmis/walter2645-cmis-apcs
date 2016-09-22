@@ -7,4 +7,6 @@ comment2.params=name\ password
 comment2.target=Room(java.lang.String,\ java.lang.String)
 comment3.params=args
 comment3.target=void\ main(java.lang.String[])
-numComments=4
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
