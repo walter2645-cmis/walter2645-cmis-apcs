@@ -53,7 +53,7 @@ public class Room
         System.out.println(r1.windows);
         System.out.println(r1.entrance);
         
-        Room r2 = new Room("Radomus's Room");
+        Room r2 = new Room("Radomus");
         System.out.println(r2);
         System.out.println(r2.entrance);
         System.out.println("h = " + r2.height);
@@ -61,10 +61,90 @@ public class Room
         System.out.println("d = " + r2.depth);
         
         String pass = JOptionPane.showInputDialog("Currently in use.\n    -T3RR4");
-        Room r3 = new Room("T3RR4's Room", pass);
+        Room r3 = new Room("T3RR4", pass);
         System.out.println(r3 + "\n" + r3.entrance);
     }//end method main
     //getter/setter methods
+    public String getName()
+    {
+        return name;
+    }//end method getName
+    public String getTruncName(int limit)
+    {
+        String ret = "Room ";
+        if( name.length() > limit )
+        {
+            ret += name.substring(0, limit);
+        }//end if
+        else
+        {
+            ret += name;
+        }//end else
+        return ret;
+    }//end method getTruncName
+    public void setName(String newName)
+    {
+        name = newName;
+    }//end method setName
+    
+    public boolean getEntrance()
+    {
+        return entrance;
+    }//end method getEntrance
+    public void setEntrance(boolean newEntrance)
+    {
+        entrance = newEntrance;
+    }//end method setEntrance
+    
+    public int getWindows()
+    {
+        return windows;
+    }//end method getWindows
+    public void setWindows(int newWindows)
+    {
+        windows = newWindows;
+    }//end method setWindows
+    
+    public double getHeight()
+    {
+        return height;
+    }//end method getHeight
+    public void setHeight(double newHeight)
+    {
+        height = newHeight;
+    }//end method setHeight
+    
+    public double getWidth()
+    {
+        return width;
+    }//end method getWidth
+    public void setWidth(double newWidth)
+    {
+        width = newWidth;
+    }//end method setWidth
+    
+    public double getDepth()
+    {
+        return depth;
+    }//end method getDepth
+    public void setDepth(double newDepth)
+    {
+        depth = newDepth;
+    }//end method setDepth
+    
+    public String getEntranceWord()
+    {
+        String ret;
+        if( entrance )
+        {
+            ret = "There is an entrance.";
+        }//end if
+        else
+        {
+            ret = "The room is inaccessible.";
+        }//end else
+        return ret;
+    }//end method getEntranceWord
     
     //other non-static methods
     public String toString()
