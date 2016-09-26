@@ -18,5 +18,7 @@ public class RoomApp
         String pass = JOptionPane.showInputDialog("Currently in use.\n    -T3RR4");
         Room r3 = new Room("T3RR4's Room", pass);
         System.out.println(r3 + "\n" + r3.getEntrance());
+        
+        
     }//end method main
 }//end class RoomApp

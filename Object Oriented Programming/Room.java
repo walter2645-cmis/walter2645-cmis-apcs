@@ -12,7 +12,7 @@ public class Room
     private double width;
     private double depth;
     //constants
-    
+    public static final double objectHeight = 0;
     //METHODS
     //constructors
     public Room( String name, int windows, boolean entrance )
@@ -146,6 +146,19 @@ public class Room
         return ret;
     }//end method getEntranceWord
     
+    public double getObjectAccess(String objectHeight)
+    {
+        double objectheight = Double.parseDouble(objectHeight);
+        if( entrance && objectheight <= height )
+        {
+            System.out.println("The object can fit in the room.");
+        }//end if
+        else
+        {
+            System.out.println("The object can't fit into the room.");
+        }//end else
+        return height - objectheight;
+    }//end method getObjectAccess
     //other non-static methods
     public String toString()
     {
