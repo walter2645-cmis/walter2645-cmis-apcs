@@ -11,7 +11,6 @@ public class Room
     private double height;
     private double width;
     private double depth;
-    private double volume;
     private double[][] windowDimensions;
     //constants
     public static final double asd = 0;
@@ -151,9 +150,15 @@ public class Room
         return ret;
     }//end method getEntranceWord
     
+    public double getFloorArea()
+    {
+        double floorarea = width * depth;
+        return floorarea;
+    }//end method getFloorArea
+    
     public double getVolume()
     {
-        volume = height * width * depth;
+        double volume = height * width * depth;
         return volume;
     }//end method getVolume
     
