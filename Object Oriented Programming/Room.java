@@ -37,6 +37,7 @@ public class Room
         this.height = Math.random() * 50;
         this.width = height * 2;
         this.depth = height * Math.random() * 10;
+        this.windows = (int)(Math.random() * 13);
     }//end method room
     public Room( String name, String password )
     {
@@ -48,9 +49,10 @@ public class Room
         this.height = 0;
         this.width = Math.random() * 25;
         this.depth = Math.random() * 99999;
+        this.windows = 0;
     }//end method room
     //class (static) methods
-    /*public static void main( String[] args )
+    /**public static void main( String[] args )
     {
         Room r1 = new Room("HS302", 24, true);
         System.out.println(r1);
@@ -67,7 +69,20 @@ public class Room
         String pass = JOptionPane.showInputDialog("Currently in use.\n    -T3RR4");
         Room r3 = new Room("T3RR4", pass);
         System.out.println(r3 + "\n" + r3.entrance);
-    }//end method main*/
+    }//end method main
+    **/
+    //overrides
+    public boolean equals(Room other)
+    {
+        if( this.entrance == other.entrance && this.windows == other.windows )
+        {
+            return true;
+        }//end if
+        else
+        {
+            return false;
+        }//end else
+    }
     //getter/setter methods
     public String getName()
     {
@@ -173,6 +188,7 @@ public class Room
         {
             System.out.println("The object can't fit into the room.");
         }//end else
+        System.out.print("The difference between the room's height and the object's height is: ");
         return height - objectheight;
     }//end method getObjectAccess
     //other non-static methods
