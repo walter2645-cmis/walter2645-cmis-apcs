@@ -1,0 +1,23 @@
+public class ClassName{
+    //FIELDS
+    //class variables
+    
+    //instance variables
+    
+    //constants
+    
+    //METHODS
+    //constructors
+    public ClassName(){
+      
+    }
+    
+    //class (static) methods
+    
+    //getter/setter methods
+    
+    //other non-static methods
+    public String toString(){
+     return "";
+    }
+}
