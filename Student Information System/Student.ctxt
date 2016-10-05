@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=name\ gradeLevel
-comment0.target=Student(java.lang.String,\ int)
+comment0.params=
+comment0.target=Student()
 comment1.params=
 comment1.target=java.lang.String\ getName()
 comment2.params=newName
@@ -8,7 +8,7 @@ comment2.target=void\ setName(java.lang.String)
 comment3.params=
 comment3.target=double\ getGpa()
 comment4.params=
-comment4.target=java.lang.String[]\ getList()
+comment4.target=Course[]\ getList()
 comment5.params=
 comment5.target=java.lang.String\ toString()
 numComments=6

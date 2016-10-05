@@ -1,5 +1,6 @@
 import javax.swing.JOptionPane;
-public class Student{
+public class Student
+{
     //FIELDS
     //class variables
     
@@ -8,14 +9,16 @@ public class Student{
     private String name;
     private double courseGrade;
     private double gpa = 4.0;
-    private String[] listOfCourses = new String[6];
+    private Course[] listOfCourses = new Course[6];
     //constants
     
     //METHODS
     //constructors
-    public Student(String name, int gradeLevel){
-        this.name = name;
-        this.gradeLevel = gradeLevel;
+    public Student()
+    {
+        this.name = JOptionPane.showInputDialog( "Enter Student Name: " );
+        this.gradeLevel = Integer.parseInt(JOptionPane.showInputDialog( "Enter Student Grade Level: " ));
+        
     }//end method Student
     
     //class (static) methods
@@ -35,12 +38,13 @@ public class Student{
         return gpa;
     }//end method getGpa
     
-    public String[] getList()
+    public Course[] getList()
     {
-        return listOfCourses;
+        return listOfCourses;//change to return courses
     }//end method getList
     //other non-static methods
-    public String toString(){
+    public String toString()
+    {
      return name + "\nGrade: " + gradeLevel + "\nGPA: " + gpa;
     }//end method toString
 }//end class Student
