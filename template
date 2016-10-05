@@ -8,16 +8,18 @@ public class ClassName{
     
     //METHODS
     //constructors
-    public ClassName(){
+    public ClassName()
+    {
       
-    }
+    }//end method
     
     //class (static) methods
     
     //getter/setter methods
     
     //other non-static methods
-    public String toString(){
+    public String toString()
+    {
      return "";
-    }
-}
+    }//end method toString
+}//end class
