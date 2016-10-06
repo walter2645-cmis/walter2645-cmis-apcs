@@ -1,11 +1,10 @@
-import javax.swing.JOptionPane;
 public class Course{
     //FIELDS
     //class variables
     
     //instance variables
     private String name;
-    private double grade; 
+    private double grade;
     
     //constants
     

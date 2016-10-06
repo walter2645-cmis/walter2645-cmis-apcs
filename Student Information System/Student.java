@@ -1,4 +1,3 @@
-import javax.swing.JOptionPane;
 public class Student
 {
     //FIELDS
@@ -9,21 +8,58 @@ public class Student
     private String name;
     private double courseGrade;
     private double gpa = 4.0;
-    private Course[] listOfCourses = new Course[6];
+    private Course[] listOfCourses = new Course[8];
     //constants
     
     //METHODS
     //constructors
     public Student()
     {
-        this.name = JOptionPane.showInputDialog( "Enter Student Name: " );
-        this.gradeLevel = Integer.parseInt(JOptionPane.showInputDialog( "Enter Student Grade Level: " ));
         
     }//end method Student
     
     //class (static) methods
     
     //getter/setter methods
+    public Course[] getCourse()
+    {
+        return listOfCourses;
+    }//end method getCourse
+    public void setCourse( int courseSlot, Course newCourse )
+    {
+        listOfCourses[ courseSlot ] = newCourse;
+    }//end method setCourse
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public String getName()
     {
         return name;
@@ -32,6 +68,15 @@ public class Student
     {
         name = newName;
     }//end method setName
+    
+    public int getGradeLevel()
+    {
+        return gradeLevel;
+    }//end method getGrade
+    public void setGradeLevel(int newGradeLevel)
+    {
+        gradeLevel = newGradeLevel;
+    }//end method setGradeLevel
     
     public double getGpa()
     {

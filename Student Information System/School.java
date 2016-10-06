@@ -1,7 +1,8 @@
-import javax.swing.JOptionPane;
 public class School
 {
-    public static void main( String[] args )
+    public Student[] plebs = new Student[5070];
+    public Course[] joylessDespair = new Course[5070];
+    public School()
     {
         Course c01 = new Course("AP Computer Science");
         Course c02 = new Course("Computer Science 1");
@@ -19,25 +20,25 @@ public class School
         Course c14 = new Course("PE");
         Course c15 = new Course("Life on Earth");
         Course c16 = new Course("Biology");
-        Course c17 = new Course();
-        Course c18 = new Course();
-        Course c19 = new Course();
-        Course c20 = new Course();
-        Course c21 = new Course();
-        Course c22 = new Course();
-        Course c23 = new Course();
-        Course c24 = new Course();
-        Course c25 = new Course();
-        Course c26 = new Course();
-        Course c27 = new Course();
-        Course c28 = new Course();
-        Course c29 = new Course();
-        Course c30 = new Course();
-        Course c31 = new Course();
-        Course c32 = new Course();
-        //maybe use a loop, or add all courses at the start
+        Course c17 = new Course("AP Biology");
+        Course c18 = new Course("Chemistry");
+        Course c19 = new Course("AP Chemistry");
+        Course c20 = new Course("Physics");
+        Course c21 = new Course("AP Physics");
+        Course c22 = new Course("3D Sculpture");
+        Course c23 = new Course("Studio Art");
+        Course c24 = new Course("AP Art");
+        Course c25 = new Course("Forensic Science");
+        Course c26 = new Course("AP Psychology");
+        Course c27 = new Course("Senior Seminar");
+        Course c28 = new Course("Creative Writing");
+        Course c29 = new Course("AP Statistics");
+        Course c30 = new Course("AP Economics");
+        Course c31 = new Course("Band");
+        Course c32 = new Course("AP Human Geography");
+        Course c33 = new Course("Dance");
         
-        Student Student0 = new Student();
-        System.out.println(Student0);
-    }//end method main
+
+        
+    }//end method School
 }//end class School
