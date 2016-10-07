@@ -13,9 +13,9 @@ public class Student
     
     //METHODS
     //constructors
-    public Student()
+    public Student(String name)
     {
-        
+        this.name = name;
     }//end method Student
     
     //class (static) methods

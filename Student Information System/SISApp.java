@@ -5,28 +5,33 @@ public class SISApp
     {
         School SchoolInstance = new School();
         String input = "";
+        int studentCount = 0;
         while( !input.equals("0") )
         {
             input = JOptionPane.showInputDialog("0) Quit\n1) View Student List\n2) View Course List\n3)Add a Student\n4) Add a Course");
             if (input.equals("1"))
             {
-                for( int index = 0; index < SchoolInstance.plebs.length; index++ )
+                for( int index = 0; index < SchoolInstance.getPlebsLength(); index++ )
                 {
-                    System.out.println(SchoolInstance.plebs[ index ]);
+                    if( SchoolInstance.getPleb(index) != null )
+                    {
+                        System.out.println(SchoolInstance.getPleb(index));
+                    }//end if
                 }//end for
             }// end if
             
-            if (input == "2")
+            if (input.equals("2"))
             {
                 
             }// end if
             
-            if (input == "3")
+            if (input.equals("3"))
             {
-                
+                SchoolInstance.setPleb(studentCount, JOptionPane.showInputDialog("Input Student Name: "));
+                studentCount++;
             }// end if
 
-            if (input == "4")
+            if (input.equals("4"))
             {
                 
             }// end if

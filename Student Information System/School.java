@@ -1,7 +1,21 @@
 public class School
 {
-    public Student[] plebs = new Student[5070];
-    public Course[] joylessDespair = new Course[5070];
+    private Student[] plebs = new Student[5070];
+    private Course[] joylessDespair = new Course[5070];
+    
+    public Student getPleb(int index)
+    {
+        return plebs[ index ];
+    }//end method getPlebs
+    public int getPlebsLength()
+    {
+        return plebs.length;
+    }//end method getPlebsLength
+    public void setPleb(int index, String name)
+    {
+        plebs[ index ].setName(name);
+    }//end method setPlebs
+    
     public School()
     {
         Course c01 = new Course("AP Computer Science");

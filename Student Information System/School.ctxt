@@ -1,4 +1,10 @@
 #BlueJ class context
-comment0.params=
-comment0.target=School()
-numComments=1
+comment0.params=index
+comment0.target=Student\ getPleb(int)
+comment1.params=
+comment1.target=int\ getPlebsLength()
+comment2.params=index\ name
+comment2.target=void\ setPleb(int,\ java.lang.String)
+comment3.params=
+comment3.target=School()
+numComments=4
