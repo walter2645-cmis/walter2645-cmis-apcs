@@ -14,16 +14,32 @@ public class SpaceShip
         }
     }
     
-    public Alien getRaidBoss()
+    public double getRaidBoss()
     {
-        int maxLife = -1;
-        Alien raidBoss;
+        double maxLife = -1;
+        Alien raidBoss = null;
         for( int index = 0; index < aliens.length; index++)
         {
-            if( aliens[index].getlife() > maxLife)
+            System.out.println(aliens[index].getLife());
+            if( aliens[index].getLife() > maxLife)
             {
                 maxLife = aliens[index].getLife();
             }
         }
+        for( int index = 0; index < aliens.length; index++)
+        {
+            if( aliens[index].getLife() == maxLife )
+            {
+                raidBoss = aliens[index];
+                index += aliens.length;
+            }
+        }
+        return raidBoss.getLife();
+    }
+    public static void main( String[] args )
+    {
+        SpaceShip sky = new SpaceShip( 1, 15 );
+        sky.addAliens();
+        System.out.println(sky.getRaidBoss());
     }
 }
