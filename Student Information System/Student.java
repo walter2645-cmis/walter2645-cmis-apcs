@@ -30,36 +30,6 @@ public class Student
         listOfCourses[ courseSlot ] = newCourse;
     }//end method setCourse
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     public String getName()
     {
         return name;

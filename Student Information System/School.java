@@ -13,12 +13,25 @@ public class School
     }//end method getPlebsLength
     public void setPleb(int index, String name)
     {
-        plebs[ index ].setName(name);
+        plebs[ index ] = new Student(name);
     }//end method setPlebs
+    
+    public Course getJoylessDespair(int index)
+    {
+        return joylessDespair[ index ];
+    }//end method getJoylessDespair
+    public int getJoylessDespairLength()
+    {
+        return joylessDespair.length;
+    }//end method getJoylessDespairLength
+    public void setJoylessDespair(int index, String name)
+    {
+        joylessDespair[ index ] = new Course(name);
+    }//end method setJoylessDespair
     
     public School()
     {
-        Course c01 = new Course("AP Computer Science");
+        /*Course c01 = new Course("AP Computer Science");
         Course c02 = new Course("Computer Science 1");
         Course c03 = new Course("Computer Science 2");
         Course c04 = new Course("English 9");
@@ -51,7 +64,7 @@ public class School
         Course c31 = new Course("Band");
         Course c32 = new Course("AP Human Geography");
         Course c33 = new Course("Dance");
-        
+        */
 
         
     }//end method School
