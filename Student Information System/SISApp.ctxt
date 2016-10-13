@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=args
 comment0.target=void\ main(java.lang.String[])
-comment1.params=
-comment1.target=void\ editStudent()
-numComments=2
+comment1.params=SchoolInstance
+comment1.target=void\ editStudent(School)
+comment2.params=chosenOne
+comment2.target=void\ editStudent2(Student)
+numComments=3

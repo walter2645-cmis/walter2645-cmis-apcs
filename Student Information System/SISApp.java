@@ -46,12 +46,49 @@ public class SISApp
 
             if ( input.equals("5") )
             {
-                editStudent();
+                editStudent(SchoolInstance);
             }//end if
         }//end while
     }//end method main
-    public static void editStudent()
+
+    public static void editStudent(School SchoolInstance)
     {
-        
+        int option = -1;
+        while( option != 0 )
+        {
+            String info = "0) Cancel\n";
+            for( int index = 0; index < SchoolInstance.getPlebsLength(); index++ )
+            {
+                if( SchoolInstance.getPleb(index) != null )
+                {
+                    Student thisStudent = SchoolInstance.getPleb(index);
+                    info += index + 1  + ") " + thisStudent.getName() + "\n";
+                }//end if
+            }//end for
+            String input = JOptionPane.showInputDialog(info);
+            option = Integer.parseInt(input);
+            if( option != 0 )
+            {
+                Student tribute = SchoolInstance.getPleb(option - 1);
+                editStudent2(tribute);
+            }//end if
+        }//end while
     }//end method editStudent
+    public static void editStudent2(Student chosenOne)
+    {
+        String input = "";
+        while( !input.equals("0") )
+        {
+            input = JOptionPane.showInputDialog("0) Cancel\n1) Add a Course\n2) Change a grade");
+            if( input.equals("1") )
+            {
+                
+            }//end if
+            
+            if( input.equals("2") )
+            {
+                
+            }//end if
+        }//end while
+    }//end method editStudent2
 }//end class SISApp
