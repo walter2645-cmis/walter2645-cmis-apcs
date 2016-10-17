@@ -11,9 +11,9 @@ public class School
     {
         return plebs.length;
     }//end method getPlebsLength
-    public void setPleb(int index, String name)
+    public void newPleb(int index, String name, int gradeLevel)
     {
-        plebs[ index ] = new Student(name);
+        plebs[ index ] = new Student(name, gradeLevel);
     }//end method setPlebs
     
     public Course getJoylessDespair(int index)
@@ -24,7 +24,7 @@ public class School
     {
         return joylessDespair.length;
     }//end method getJoylessDespairLength
-    public void setJoylessDespair(int index, String name)
+    public void newJoylessDespair(int index, String name)
     {
         joylessDespair[ index ] = new Course(name);
     }//end method setJoylessDespair

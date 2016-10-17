@@ -13,9 +13,10 @@ public class Student
     
     //METHODS
     //constructors
-    public Student(String name)
+    public Student(String name, int grade)
     {
         this.name = name;
+        this.gradeLevel = grade;
     }//end method Student
     
     //class (static) methods
