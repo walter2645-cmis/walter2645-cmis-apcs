@@ -4,8 +4,8 @@ public class Course{
     
     //instance variables
     private String name;
-    private double grade;
-    
+    private double grade = 100;
+    private Student[] students;
     //constants
     
     //METHODS

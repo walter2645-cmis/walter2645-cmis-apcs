@@ -91,7 +91,8 @@ public class SISApp
                     }//end if
                 }//end if
                 int input2 = Integer.parseInt(JOptionPane.showInputDialog(list));
-                chosenOne.setCourse(0, school.getJoylessDespair(input2));
+                int courseSlot = Integer.parseInt(JOptionPane.showInputDialog(studentCourses(chosenOne)));
+                chosenOne.setCourse(courseSlot, school.getJoylessDespair(input2));
             }//end if
 
             if( input.equals("2") )
@@ -100,4 +101,21 @@ public class SISApp
             }//end if
         }//end while
     }//end method editStudent2
+    public static String studentCourses(Student labrat)
+    {
+        Course[] r8 = labrat.getCourse();
+        String ret = "";
+        for( int index = 0; index < r8.length; index++ )
+        {
+            if( r8[ index ] != null )
+            {
+                ret += index + ") " + r8[ index ].getCourseName() + "\n";
+            }//end if
+            else
+            {
+                ret += index + ") Empty Course Slot\n";
+            }//end else
+        }//end for
+        return ret;
+    }//end method studentCourses
 }//end class SISApp

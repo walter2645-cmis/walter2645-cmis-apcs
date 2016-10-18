@@ -5,4 +5,6 @@ comment1.params=school
 comment1.target=void\ editStudent(School)
 comment2.params=chosenOne\ school
 comment2.target=void\ editStudent2(Student,\ School)
-numComments=3
+comment3.params=labrat
+comment3.target=java.lang.String\ studentCourses(Student)
+numComments=4
