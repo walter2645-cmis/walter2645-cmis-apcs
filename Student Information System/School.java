@@ -20,6 +20,10 @@ public class School
     {
         return joylessDespair[ index ];
     }//end method getJoylessDespair
+    public String getJoylessDespairName(int index)
+    {
+        return joylessDespair[ index ].getCourseName();
+    }//end method getJoylessDespairName
     public int getJoylessDespairLength()
     {
         return joylessDespair.length;

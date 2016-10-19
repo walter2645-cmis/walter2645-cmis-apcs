@@ -9,7 +9,7 @@ public class SISApp
         int courseCount = 0;
         while( !input.equals("0") )
         {
-            input = JOptionPane.showInputDialog("0) Quit\n1) View Student List\n2) View Course List\n3) Add a Student\n4) Add a Course\n5) Edit a Student");
+            input = JOptionPane.showInputDialog("What do...\n0) Quit\n1) View Student List\n2) View Course List\n3) Add a Student\n4) Add a Course\n5) View / Edit a Student");
             if( input.equals("1") )
             {
                 for( int index = 0; index < school.getPlebsLength(); index++ )
@@ -56,7 +56,7 @@ public class SISApp
         int option = -1;
         while( option != 0 )
         {
-            String info = "0) Cancel\n";
+            String info = "What do...\nWhich  Student?\n0) Cancel\n";
             for( int index = 0; index < school.getPlebsLength(); index++ )
             {
                 if( school.getPleb(index) != null )
@@ -79,15 +79,15 @@ public class SISApp
         String input = "";
         while( !input.equals("0") )
         {
-            input = JOptionPane.showInputDialog("0) Cancel\n1) Add a Course\n2) Change a grade");
+            input = JOptionPane.showInputDialog("What do...\n0) Cancel\n1) Set a Course\n2) View Course List\n3) Change a grade");
             if( input.equals("1") )
             {
-                String list = "";
+                String list = "What do...\nWhich course?\n";
                 for( int index = 0; index < school.getJoylessDespairLength(); index++ )
                 {
                     if( school.getJoylessDespair(index) != null )
                     {
-                        list += index + ") " + school.getJoylessDespair(index);
+                        list += index + ") " + school.getJoylessDespairName(index) + "\n";
                     }//end if
                 }//end if
                 int input2 = Integer.parseInt(JOptionPane.showInputDialog(list));
@@ -97,14 +97,29 @@ public class SISApp
 
             if( input.equals("2") )
             {
-
+                Course[] r8 = chosenOne.getCourse();
+                for( int index = 0; index < r8.length; index++ )
+                {
+                    if( r8[ index ] != null )
+                    {
+                        System.out.println(r8[ index ]);
+                    }//end if
+                }//end for
+            }//end if
+            
+            if( input.equals("3") )
+            {
+                int courseSlot = Integer.parseInt(JOptionPane.showInputDialog(studentCourses(chosenOne)));
+                double newGrade = Double.parseDouble(JOptionPane.showInputDialog("Input New Grade: "));
+                Course[] r8 = chosenOne.getCourse();
+                r8[ courseSlot ].setGrade(newGrade);
             }//end if
         }//end while
     }//end method editStudent2
     public static String studentCourses(Student labrat)
     {
         Course[] r8 = labrat.getCourse();
-        String ret = "";
+        String ret = "Which course slot?\n";
         for( int index = 0; index < r8.length; index++ )
         {
             if( r8[ index ] != null )
@@ -113,7 +128,7 @@ public class SISApp
             }//end if
             else
             {
-                ret += index + ") Empty Course Slot\n";
+                ret += index + ") Empty Slot\n";
             }//end else
         }//end for
         return ret;

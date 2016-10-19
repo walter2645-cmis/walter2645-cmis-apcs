@@ -26,9 +26,18 @@ public class Course{
     {
         name = newCourseName;
     }//end method setCourseName
+    
+    public double getGrade()
+    {
+        return grade;
+    }//end method getGrade
+    public void setGrade(double newGrade)
+    {
+        this.grade = newGrade;
+    }//end method setGrade
     //other non-static methods
     public String toString()
     {
-     return name;
+     return name + " " + grade;
     }//end method toString
 }//end class Course
