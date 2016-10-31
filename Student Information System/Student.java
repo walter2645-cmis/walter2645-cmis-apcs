@@ -7,7 +7,6 @@ public class Student
     private int gradeLevel;
     private String name;
     private double courseGrade;
-    private double gpa = 4.0;
     private Course[] listOfCourses = new Course[8];
     //constants
     
@@ -49,11 +48,14 @@ public class Student
         gradeLevel = newGradeLevel;
     }//end method setGradeLevel
     
-    public double getGpa()
+    /*public double getGpa()
     {
-        return gpa;
+        
+        
+        
+        
     }//end method getGpa
-    
+    */
     public Course[] getList()
     {
         return listOfCourses;//change to return courses
@@ -61,6 +63,6 @@ public class Student
     //other non-static methods
     public String toString()
     {
-     return name + "\nGrade: " + gradeLevel + "\nGPA: " + gpa;
+     return name + "\nGrade: " + gradeLevel;
     }//end method toString
 }//end class Student

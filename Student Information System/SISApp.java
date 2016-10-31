@@ -27,7 +27,8 @@ public class SISApp
                 {
                     if( school.getJoylessDespair(index) != null )
                     {
-                        System.out.println(school.getJoylessDespair(index));
+                        Course dis = school.getJoylessDespair(index);
+                        System.out.println(dis.getCourseName());
                     }//end if
                 }//end for
             }// end if

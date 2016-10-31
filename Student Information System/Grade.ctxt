@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=course\ grade
+comment0.target=Grade(Course,\ double)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+numComments=2
