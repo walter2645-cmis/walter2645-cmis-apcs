@@ -20,13 +20,43 @@ public class Student{
     //class (static) methods
 
     //getter/setter methods
+    public int getID()
+    {
+        return id;
+    }//end method getID
     public Grade[] getGrades()
     {
         return grades;
     }//end method getGrades
     public Grade[] minMaxGrades()
     {
-        return null;
+        Grade[] minMax = new Grade[2];
+        double min = 5.0;
+        double max = -1;
+        for( int index = 0; index < grades.length; index++ )
+        {
+            if( grades[index] != null )
+            {
+                double score = grades[index].getScore();
+                if( score < min )
+                {
+                    min = score;
+                }//end if
+                if( score > max )
+                {
+                    max = score;
+                }//end if
+            }//end if
+        }//end for
+        if( min != 5.0 )
+        {
+            minMax[ 0 ] = min;
+        }//end if
+        if( max != -1 )
+        {
+            minMax[ 1 ] = max;
+        }//end if
+        return minMax;
     }//end method minMaxGrades
     //other non-static methods
     public String toString()
