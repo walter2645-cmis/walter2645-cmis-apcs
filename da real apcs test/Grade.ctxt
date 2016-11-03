@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=Grade()
+comment0.params=score
+comment0.target=Grade(double)
 comment1.params=
 comment1.target=double\ getScore()
 comment2.params=

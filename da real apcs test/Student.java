@@ -7,6 +7,17 @@ public class Student{
     private int gradeLevel;
     private int id;
     private Grade[] grades = new Grade[8];
+    public void justdoit()
+    {
+        grades[0] = new Grade(100);
+        grades[1] = new Grade(42);
+        grades[2] = new Grade(69);
+        grades[3] = new Grade(12);
+        grades[4] = new Grade(7);
+        grades[5] = new Grade(55);
+        grades[6] = new Grade(89);
+        grades[7] = new Grade(70);
+    }
     //constants
 
     //METHODS
@@ -50,11 +61,11 @@ public class Student{
         }//end for
         if( min != 5.0 )
         {
-            minMax[ 0 ] = min;
+            minMax[ 0 ] = new Grade(min);
         }//end if
         if( max != -1 )
         {
-            minMax[ 1 ] = max;
+            minMax[ 1 ] = new Grade(max);
         }//end if
         return minMax;
     }//end method minMaxGrades

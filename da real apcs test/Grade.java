@@ -9,9 +9,9 @@ public class Grade{
 
     //METHODS
     //constructors
-    public Grade()
+    public Grade(double score)
     {
-
+        this.score = score;
     }//end method
 
     //class (static) methods
