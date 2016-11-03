@@ -20,6 +20,6 @@ public class ClassName{
     //other non-static methods
     public String toString()
     {
-         return "";
+        return "";
     }//end method toString
 }//end class
