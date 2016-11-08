@@ -14,8 +14,17 @@ public class Array2D2
                 total += array[y][x];
                 rowTotal += array[y][x];
             }//end for
-            System.out.println(rowTotal);
+            System.out.println("Row " + y + " total: " + rowTotal);
         }//end for
-        System.out.println(total);
+        for( int y = 0; y < array[0].length; y++ )
+        {
+            int colTotal = 0;
+            for( int x = 0; x < array.length; x++ )
+            {
+                colTotal += array[x][y];
+            }//end for
+            System.out.println("Column " + y + " total: " + colTotal);
+        }//end for
+        System.out.println("Grand total: " + total);
     }//end method main
 }//end class Array2D2
