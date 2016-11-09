@@ -1,19 +1,19 @@
 #BlueJ package file
 objectbench.height=76
-objectbench.width=686
+objectbench.width=687
 package.editor.height=400
-package.editor.width=560
-package.editor.x=819
+package.editor.width=561
+package.editor.x=818
 package.editor.y=138
 package.numDependencies=0
 package.numTargets=5
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
-target1.editor.height=700
+target1.editor.height=706
 target1.editor.width=900
 target1.editor.x=700
-target1.editor.y=158
+target1.editor.y=152
 target1.height=50
 target1.name=Array2D4
 target1.naviview.expanded=true

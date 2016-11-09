@@ -21,12 +21,6 @@ public class Array2D3
                 {
                     array[y][x] = x * y;
                 }//end else
-            }//end for
-        }//end for
-        for( int y = 0; y < array.length; y++ )
-        {
-            for( int x = 0; x < array[0].length; x++ )
-            {
                 System.out.format("%-9d", array[y][x]);
             }//end for
             System.out.print("\n");
