@@ -36,16 +36,24 @@ public class Array2D4
             for( int x = 0; x < array[0].length; x++ )
             {
                 array[y][x] = letter;
-                String output = "";
-                //if( x % 3 == y % 2 )
-                //{
-                    output = String.valueOf(array[y][x]);
-                //}//end if
-                //else
-                //{
-                //    output = "     ";
-                //}//end else
-                System.out.print(output);
+                if( y % 2 == 0 )
+                {
+                    String ou = String.valueOf(array[y][x]);
+                    System.out.format("%-10s", ou);
+                }//end if
+                if( y % 2 == 1 && x == 0 )
+                {
+                    System.out.print("     ");
+                }//end if
+                if( y % 2 == 1 )
+                {
+                    String ou = String.valueOf(array[y][x]);
+                    System.out.format("%-10s", ou);
+                }//end if
+                if( y % 2 == 1 && x == array[0].length - 2 )
+                {
+                    x++;
+                }//end if
                 if( letter == stop )
                 {
                     letter -= reset;
