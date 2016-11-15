@@ -12,6 +12,18 @@ public class Array2D6
         {
             char[] nameChar = nameCheck.toCharArray();
             char[] pwChar = pwCheck.toCharArray();
+            if( pw.length() < name.length() || pw.length() == name.length() && !pwCheck.equals(nameCheck) )
+            {
+                forbidden = false;
+            }//end if
+            else if( pw.length() > name.length() )
+            {
+                int diff = pw.length() - name.length();
+                while( end < pw.length )
+                {
+                    char[] pwSegment = new char[name.length];
+                }//end while
+            }//end else if
             
         }//end while
     }//end method main
