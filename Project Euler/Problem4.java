@@ -9,7 +9,6 @@ public class Problem4
             for( int x = array[0].length - 1; x > 1; x-- )
             {
                 array[y][x] = (y + 1) * (x + 1);
-                String l = Integer.toString(array[y][x]);
                 char[] num = ("" + array[y][x]).toCharArray();
                 int zero = 0;
                 int i = num.length - 1;
