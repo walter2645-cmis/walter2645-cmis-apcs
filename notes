@@ -16,3 +16,4 @@ expression
 expression
 statement
 block
+git rm -r "Filename" removes that file from repository
