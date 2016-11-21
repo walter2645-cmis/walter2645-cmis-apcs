@@ -20,7 +20,7 @@ public class Test
          * The 9 must not be on the edge of the array (i.e. not in the first or last row or column)   *
          * Everything should work for any positive value for d.                                       *
          **********************************************************************************************/
-    }//enc method Test
+    }//end method Test
 
     public void showArray(){
         for ( int y = 0; y < nums.length; y++ ){
@@ -64,7 +64,7 @@ public class Test
     }//end method getNineAndFriends
 
     public static void main(String[] args){
-        Test test = new Test(3);
+        Test test = new Test(5);
         test.showArray();
         int[][] nine = test.getNineAndFriends();
         for( int y = 0; y < nine.length; y++){
