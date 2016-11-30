@@ -1,3 +1,4 @@
+package Problem1;
 public class MyPhone extends MyDevice
 {
     private int number;
@@ -19,6 +20,6 @@ public class MyPhone extends MyDevice
     
     public String toString()
     {
-        return String.format("%s, My number is %d.", super.toString(), number);
+        return String.format("%s My number is %d.", super.toString(), number);
     }//end method toString
 }//end class MyPhone

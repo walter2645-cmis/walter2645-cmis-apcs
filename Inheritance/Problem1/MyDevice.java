@@ -1,3 +1,4 @@
+package Problem1;
 public class MyDevice
 {
     private String name;

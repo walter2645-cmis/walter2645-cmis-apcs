@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=name\ channels
+comment0.target=MyTv(java.lang.String,\ int)
+comment1.params=
+comment1.target=int\ getChannels()
+comment2.params=newChannels
+comment2.target=void\ setChannels(int)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
