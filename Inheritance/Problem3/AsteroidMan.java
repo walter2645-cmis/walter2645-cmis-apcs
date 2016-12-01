@@ -7,6 +7,6 @@ public class AsteroidMan extends SuperHero
     }//end method AsteroidMan
     public String motto()
     {
-        return "";
+        return "You might see me coming but it may be technologically infeasible to stop me for another 100 years.";
     }//end method motto
 }//end class AsteroidMan
