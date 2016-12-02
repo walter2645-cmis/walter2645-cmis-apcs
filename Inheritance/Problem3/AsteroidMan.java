@@ -1,9 +1,9 @@
 package Problem3;
 public class AsteroidMan extends SuperHero
 {
-    public AsteroidMan()
+    public AsteroidMan( String color, boolean cape )
     {
-        super();
+        super( color, cape );
     }//end method AsteroidMan
     public String motto()
     {

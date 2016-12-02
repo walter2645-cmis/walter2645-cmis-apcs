@@ -9,6 +9,12 @@ public abstract class SuperHero
         this.suitColor = new String();
         this.hasCape = false;
     } // end zero-arg constructor SuperHero
+    
+    public SuperHero( String color, boolean cape )
+    {
+        this.suitColor = color;
+        this.hasCape = cape;
+    }//end 2-arg constructor SuperHero
 
     public void setSuitColor(String suitColor)
     {
@@ -32,4 +38,8 @@ public abstract class SuperHero
 
     public abstract String motto();
 
+    public String toString()
+    {
+        return getClass().getName();
+    }//end method toString
 } // end abstract class SuperHero

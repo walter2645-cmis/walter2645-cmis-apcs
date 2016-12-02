@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=color\ cape
-comment0.target=AsteroidMan(java.lang.String,\ boolean)
+comment0.target=Sans(java.lang.String,\ boolean)
 comment1.params=
 comment1.target=java.lang.String\ motto()
 numComments=2
