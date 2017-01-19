@@ -20,7 +20,7 @@ public class Space  extends World
         super(600, 400, 1); 
         addObject(new Rocket(), 300, 340);
         theCounter = new Counter();
-        addObject(new Counter(), 40, 340);
+        addObject(theCounter, 40, 340);
     }
 
     public Counter getCounter()
