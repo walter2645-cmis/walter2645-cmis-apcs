@@ -16,6 +16,17 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 400, 1);
+        Brick b = new Brick();
+        addObject(b, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+        
+        Darude d = new Darude();
+        addObject(d, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+        
+        DRocket r = new DRocket();
+        addObject(r, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+        
+        Pizza p = new Pizza();
+        addObject(p, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
     }
 }

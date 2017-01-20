@@ -19,7 +19,7 @@ public class Darude extends Actor
         if( Greenfoot.getRandomNumber(100) < 7 )
         {
             decision = Greenfoot.getRandomNumber(4);
-        }
+        }//end if
         if( decision == 0 )
         {
             move(-4);
