@@ -14,19 +14,19 @@ public class DRocket extends Actor
      */
     public void act()
     {
-        if( Greenfoot.isKeyDown("a") )
+        if( Greenfoot.isKeyDown("left") )
         {
             turn(-3);
         }//end if
-        if( Greenfoot.isKeyDown("d") )
+        if( Greenfoot.isKeyDown("right") )
         {
             turn(3);
         }//end if
-        if( Greenfoot.isKeyDown("w") )
+        if( Greenfoot.isKeyDown("up") )
         {
             move(4);
         }//end if
-        if( Greenfoot.isKeyDown("s") )
+        if( Greenfoot.isKeyDown("down") )
         {
             move(-4);
         }//end if

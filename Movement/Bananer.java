@@ -12,8 +12,14 @@ public class Bananer extends Actor
      * Act - do whatever the Bananer wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private Actor target;
+    public Bananer(Actor target)
+    {
+        this.target = target;
+    }
     public void act() 
     {
-        
-    }    
+        turnTowards(target.getX(), target.getY());
+        move(2);
+    }
 }
