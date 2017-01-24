@@ -13,6 +13,7 @@ public class MyWorld extends World
     private DRocket r;
     private Pizza p;
     private Bananer n;
+    private Glitch g;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -36,6 +37,9 @@ public class MyWorld extends World
         
         p = new Pizza();
         addObject(p, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+        
+        g = new Glitch();
+        addObject(g, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
         
         n = new Bananer(b);
         addObject(n, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
