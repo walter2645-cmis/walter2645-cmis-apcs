@@ -14,6 +14,8 @@ public class MyWorld extends World
     private Pizza p;
     private Bananer n;
     private Glitch g;
+    private Nuke s;
+    private Nuke s7;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -22,7 +24,7 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        populate();
+        populate2();
     }
     public void populate()
     {
@@ -43,6 +45,39 @@ public class MyWorld extends World
         
         n = new Bananer(b);
         addObject(n, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+    }
+    public void populate2()
+    {
+        s = new Nuke(true, null);
+        addObject(s, 0, 0);
+        
+        s7 = s;
+        s = new Nuke(false, s7);
+        addObject(s, 0, 0);
+        
+        s7 = s;
+        s = new Nuke(false, s7);
+        addObject(s, 0, 0);
+        
+        s7 = s;
+        s = new Nuke(false, s7);
+        addObject(s, 0, 0);
+        
+        s7 = s;
+        s = new Nuke(false, s7);
+        addObject(s, 0, 0);
+        
+        s7 = s;
+        s = new Nuke(false, s7);
+        addObject(s, 0, 0);
+        
+        s7 = s;
+        s = new Nuke(false, s7);
+        addObject(s, 0, 0);
+        
+        s7 = s;
+        s = new Nuke(false, s7);
+        addObject(s, 0, 0);
     }
     public Brick getBrick()
     {
