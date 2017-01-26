@@ -8,27 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Brick extends Actor
 {
+    private int karma = 50;
     /**
      * Act - do whatever the Brick wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        if( getX() > getWorld().getWidth() - 3 )
+        if( isTouching( Balls.class ) && karma == 0 )
         {
-            setLocation(3, getY());
-        }
-        if( getX() < 3 )
-        {
-            setLocation(getWorld().getWidth() - 3, getY());
-        }
-        if( getY() > getWorld().getHeight() - 3 )
-        {
-            setLocation(getX(), 3);
-        }
-        if( getY() < 3 )
-        {
-            setLocation(getX(), getWorld().getHeight() - 3);
+            getWorld().addObject(new Balls(), Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+            karma += 50;
         }
         if( Greenfoot.isKeyDown("a") )
         {
@@ -46,5 +36,26 @@ public class Brick extends Actor
         {
             setLocation(getX(), getY()+4);
         }//end if
-    }    
+        karma--;
+    }
+
+    public void worldEnd()
+    {
+        if( getX() > getWorld().getWidth() - 3 )
+        {
+            setLocation(3, getY());
+        }
+        if( getX() < 3 )
+        {
+            setLocation(getWorld().getWidth() - 3, getY());
+        }
+        if( getY() > getWorld().getHeight() - 3 )
+        {
+            setLocation(getX(), 3);
+        }
+        if( getY() < 3 )
+        {
+            setLocation(getX(), getWorld().getHeight() - 3);
+        }
+    }
 }

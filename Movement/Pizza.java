@@ -33,5 +33,9 @@ public class Pizza extends Actor
         {
             move(4);
         }//end else if
+        if( isTouching( Balls.class ) )
+        {
+            removeTouching( Balls.class );
+        }
     }    
 }

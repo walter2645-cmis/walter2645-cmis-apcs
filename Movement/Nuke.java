@@ -29,13 +29,7 @@ public class Nuke extends Actor
             {
                 decision = Greenfoot.getRandomNumber(3);
             }//end if
-            if( isAtEdge() )
-            {
-                int r = getRotation();
-                setRotation( Math.abs(r - 180 ) );
-                move(4);
-            }
-            /*if( getX() > getWorld().getWidth() - 3 )
+            if( getX() > getWorld().getWidth() - 3 )
             {
                 turnTowards(3, getY());
                 move(2);
@@ -54,7 +48,7 @@ public class Nuke extends Actor
             {
                 turnTowards(getX(), getWorld().getHeight() - 3);
                 move(2);
-            }*/
+            }
             else if( decision == 0 )
             {
                 turn(-3);
