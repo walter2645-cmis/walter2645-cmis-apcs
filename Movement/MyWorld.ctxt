@@ -18,4 +18,6 @@ comment7.params=
 comment7.target=DRocket\ getDRocket()
 comment8.params=
 comment8.target=Pizza\ getPizza()
-numComments=9
+comment9.params=
+comment9.target=DePasta\ getCount()
+numComments=10

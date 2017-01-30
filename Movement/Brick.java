@@ -8,17 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Brick extends Actor
 {
-    private int karma = 50;
+    private int karma = 10;
     /**
      * Act - do whatever the Brick wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        if( isTouching( Balls.class ) && karma == 0 )
+        if( isTouching( Balls.class ) && karma <= 0 )
         {
-            getWorld().addObject(new Balls(), Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
-            karma += 50;
+            Balls b = new Balls();
+            getWorld().addObject(b , Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+            karma += 250;
         }
         if( Greenfoot.isKeyDown("a") )
         {

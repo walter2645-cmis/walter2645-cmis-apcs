@@ -36,6 +36,9 @@ public class Pizza extends Actor
         if( isTouching( Balls.class ) )
         {
             removeTouching( Balls.class );
+            MyWorld world = (MyWorld) getWorld();
+            DePasta c = world.getCount();
+            c.nom();
         }
     }    
 }

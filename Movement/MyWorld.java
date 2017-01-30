@@ -16,6 +16,7 @@ public class MyWorld extends World
     private Glitch g;
     private Nuke s;
     private Nuke s7;
+    private DePasta c;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -89,6 +90,8 @@ public class MyWorld extends World
         Balls y = new Balls();
         b = new Brick();
         p = new Pizza();
+        c = new DePasta();
+        addObject(c, 30, 370);
         addObject(p, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
         addObject(b, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
         addObject(q, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
@@ -113,5 +116,9 @@ public class MyWorld extends World
     public Pizza getPizza()
     {
         return p;
+    }
+    public DePasta getCount()
+    {
+        return c;
     }
 }
