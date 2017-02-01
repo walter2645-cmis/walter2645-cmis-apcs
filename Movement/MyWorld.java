@@ -25,7 +25,7 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        populate2();
+        populate4();
     }
     public void populate()
     {
@@ -100,6 +100,13 @@ public class MyWorld extends World
         addObject(r, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
         addObject(t, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
         addObject(y, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+    }
+    public void populate4()
+    {
+        Trump t = new Trump();
+        Brick2 br = new Brick2();
+        addObject(br, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+        addObject(t, 300, 200);
     }
     public Brick getBrick()
     {

@@ -38,6 +38,7 @@ public class Brick extends Actor
             setLocation(getX(), getY()+4);
         }//end if
         karma--;
+        worldEnd();
     }
 
     public void worldEnd()
