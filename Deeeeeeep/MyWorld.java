@@ -66,7 +66,13 @@ public class MyWorld extends World
 
     public void removeHead()
     {
-        if( first != null && last != null )
+        if( first == last )
+        {
+            removeObject(first);
+            last = null;
+            first = null;
+        }
+        else if( first != null && last != null )
         {
             Node newHead = findNewHead(last);
             newHead.setTarget(null);
@@ -77,7 +83,7 @@ public class MyWorld extends World
 
     public Node findNewHead( Node head )
     {
-        while( head.getTarget() != null )
+        while( head.getTarget().getTarget() != null )
         {
             head = head.getTarget();
         }
