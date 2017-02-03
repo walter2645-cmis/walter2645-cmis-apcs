@@ -18,7 +18,7 @@ public class Brick2 extends Actor
      */
     public void act() 
     {
-        Mexican();
+        //Mexican();
         if( Greenfoot.isKeyDown("a") && borderLeft )
         {
             move(-4);
@@ -38,7 +38,9 @@ public class Brick2 extends Actor
         worldEnd();
     }
     
-    public void Mexican()
+    
+    
+    /*public void Mexican()
     {
         boolean upLeft = getOneObjectAtOffset( -25, -25, Trump.class ) != null;
         boolean downLeft = getOneObjectAtOffset( -25, 25, Trump.class ) != null;
@@ -80,7 +82,7 @@ public class Brick2 extends Actor
         {
             borderUp = true;
         }
-    }
+    }*/
 
     public void worldEnd()
     {
