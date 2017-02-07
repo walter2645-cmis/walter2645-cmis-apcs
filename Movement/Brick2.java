@@ -12,52 +12,47 @@ public class Brick2 extends Actor
      * Act - do whatever the Brick wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private int[][] physics = new int[50][50];
     public void act() 
     {
+        int ox = getX();
+        int oy = getY();
         if( Greenfoot.isKeyDown("a") )
         {
-            if( isTouching( Trump.class ) )
-            {
-                move(1);
-            }
-            else
-            {
-                move(-1);
-            }
+            move(-4);
         }//end if
         if( Greenfoot.isKeyDown("d") )
         {
-            if( isTouching( Trump.class ) )
-            {
-                move(-1);
-            }
-            else
-            {
-                move(1);
-            }
+            move(4);
         }//end if
         if( Greenfoot.isKeyDown("w") )
         {
-            if( isTouching( Trump.class ) )
-            {
-                setLocation(getX(), getY()+1);
-            }
-            else{
-                setLocation(getX(), getY()-1);
-            }
+            setLocation(getX(), getY()-4);
         }//end if
         if( Greenfoot.isKeyDown("s") )
         {
-            if( isTouching( Trump.class ) )
-            {
-                setLocation(getX(), getY()-1);
-            }
-            else
-            {
-                setLocation(getX(), getY()+1);
-            }
+            setLocation(getX(), getY()+4);
+        }//end if
+        hit(ox, oy);
+        if( Greenfoot.isKeyDown("r") )
+        {
+            setLocation(Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
         }//end if
         worldEnd();
+    }
+    
+    public void hit(int ox, int oy)
+    {
+        for( int y = 0; y < physics.length; y++ )
+        {
+            for( int x = 0; x < physics[0].length; x++ )
+            {
+                if( getOneObjectAtOffset(x - 25, y - 25, Trump.class) != null )
+                {
+                    setLocation(ox, oy);
+                }
+            }
+        }
     }
 
     public void worldEnd()
