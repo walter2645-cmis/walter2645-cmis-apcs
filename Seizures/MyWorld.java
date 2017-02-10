@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     private Bong Bong1, Bong2;
+    private int pipe;
+    private int heights;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -18,10 +20,15 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
         addObject(new Thing(), 169, 200);
+        pipe = 120;
     }
 
     public void act()
     {
-        
+        if( pipe < 0 )
+        {
+            pipe = 120;
+            
+        }
     }
 }

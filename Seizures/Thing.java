@@ -18,6 +18,22 @@ public class Thing extends Actor
 
     public void act()
     {
+        flap();
+        gravity();
+    }
+    
+    public void flap()
+    {
+        String key = Greenfoot.getKey();
+        if(key != null){
+            if( key.equals("space")){
+                turn(-45);
+            }
+        }
+    }
+    
+    public void gravity()
+    {
         
     }
 }
