@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
 
 /**
  * Write a description of class Bong here.
@@ -12,7 +11,7 @@ public class Thing extends Actor
     public Thing()
     {
         GreenfootImage rescale = getImage();
-        rescale.scale(20, 16);
+        rescale.scale(30, 24);
         
     }
 

@@ -10,7 +10,7 @@ public class MyWorld extends World
 {
     private Bong Bong1, Bong2;
     private int pipe;
-    private int heights;
+    private int height;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -21,6 +21,7 @@ public class MyWorld extends World
         super(600, 400, 1);
         addObject(new Thing(), 169, 200);
         pipe = 120;
+        addObject(new PipeCleaner(), 0, 0);
     }
 
     public void act()
@@ -28,7 +29,12 @@ public class MyWorld extends World
         if( pipe < 0 )
         {
             pipe = 120;
-            
+            height = Greenfoot.getRandomNumber(320);
+            Bong1 = new Bong(height);
+            Bong2 = new Bong(320 - height);
+            addObject(Bong1, 600, height / 2);
+            addObject(Bong2, 600, (320 - height) / 2);
         }
+        pipe--;
     }
 }
