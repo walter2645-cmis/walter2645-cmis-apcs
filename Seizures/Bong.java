@@ -25,6 +25,6 @@ public class Bong extends Actor
     }
     public void act() 
     {
-        move(-3);
+        move(-4);
     }    
 }
