@@ -22,7 +22,7 @@ public class MyWorld extends World
         super(600, 400, 1);
         addObject(new Thing(), 169, 200);
         pipe = 120;
-        addObject(new PipeCleaner(), 0, 0);
+        addObject(new PipeCleaner(), 0, 200);
         fk = new Frustration();
         addObject(fk, 20, 380);
     }
@@ -32,9 +32,12 @@ public class MyWorld extends World
         if( pipe < 0 )
         {
             pipe = 85;
-            height = Greenfoot.getRandomNumber(200) + 50;
+            height = Greenfoot.getRandomNumber(130) + 50;
             Bong1 = new Bong(height);
             addObject(Bong1, 600, height / 2);
+            int high = 400 - height - 100;
+            Bong2 = new Bong(high);
+            addObject(Bong2, 600, high / 2 + height + 100);
         }
         pipe--;
     }
