@@ -21,6 +21,10 @@ public class Thing extends Actor
     {
         flap();
         gravity();
+        if( isTouching( null ) || isAtEdge() )
+        {
+            Greenfoot.stop();
+        }
     }
     
     public void flap()

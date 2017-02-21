@@ -12,6 +12,8 @@ public class MyWorld extends World
     private int pipe;
     private int height;
     private Frustration fk;
+    private Calculus integration;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -25,6 +27,8 @@ public class MyWorld extends World
         addObject(new PipeCleaner(), 0, 200);
         fk = new Frustration();
         addObject(fk, 20, 380);
+        integration = new Calculus();
+        addObject(integration, 100, 200);
     }
 
     public void act()
@@ -40,5 +44,10 @@ public class MyWorld extends World
             addObject(Bong2, 600, high / 2 + height + 100);
         }
         pipe--;
+    }
+    
+    public Frustration getFrustration()
+    {
+        return fk;
     }
 }
