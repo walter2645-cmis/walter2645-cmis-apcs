@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Thing extends Actor
 {
-    private int cheese = 1;
-    private int slow = 0;
+    private int lipWeight = 1;
+    private int botox = 0;
     public Thing()
     {
         GreenfootImage rescale = getImage();
@@ -33,7 +33,7 @@ public class Thing extends Actor
         if(key != null){
             if( key.equals("space")){
                 setRotation(315);
-                cheese = 1;
+                lipWeight = 1;
                 setLocation(getX(), getY()-40);
             }
         }
@@ -41,20 +41,20 @@ public class Thing extends Actor
     
     public void gravity()
     {
-        turn(cheese);
-        if( slow <= 0 )
+        turn(lipWeight);
+        if( botox <= 0 )
         {
-            cheese++;
-            slow = 7;
+            lipWeight++;
+            botox = 7;
         }
         else
         {
-            slow--;
+            botox--;
         }
         if( getRotation() > 85 && getRotation() < 180 )
         {
-            turn(-cheese);
+            turn(-lipWeight);
         }
-        setLocation(getX(), getY()+cheese);
+        setLocation(getX(), getY()+lipWeight);
     }
 }
