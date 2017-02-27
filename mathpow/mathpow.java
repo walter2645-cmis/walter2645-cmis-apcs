@@ -1,4 +1,4 @@
-
+import javax.swing.JOptionPane;
 /**
  * Write a description of class mathpow here.
  * 
@@ -9,7 +9,11 @@ public class mathpow
 {
     public static void main( String[] args )
     {
-        System.out.println(power(2, 5));
+        String x = JOptionPane.showInputDialog("x = ");
+        String n = JOptionPane.showInputDialog("to the power of: ");
+        int a = Integer.parseInt(x);
+        int b = Integer.parseInt(n);
+        System.out.println(power(a, b));
     }
     public static int power(int x, int n){
         if(n == 1){
