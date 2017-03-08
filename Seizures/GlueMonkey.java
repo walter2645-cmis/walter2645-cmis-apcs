@@ -61,5 +61,25 @@ public class GlueMonkey extends Actor
         {
             setLocation(getX()+2, getY()+2);
         }
+        if( getY() < 5 )
+        {
+            setLocation(getX(), getY() + 10);
+            dir = Greenfoot.getRandomNumber(8);
+        }
+        if( getY() > getWorld().getHeight() - 5 )
+        {
+            setLocation(getX(), getY() - 10);
+            dir = Greenfoot.getRandomNumber(8);
+        }
+        if( getX() > getWorld().getWidth() - 5 )
+        {
+            move(-10);
+            dir = Greenfoot.getRandomNumber(8);
+        }
+        if( getX() < 400 )
+        {
+            move(10);
+            dir = Greenfoot.getRandomNumber(8);
+        }
     }
 }

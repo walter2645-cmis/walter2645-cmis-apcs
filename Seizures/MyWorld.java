@@ -13,7 +13,7 @@ public class MyWorld extends World
     private int height;
     private Frustration fk;
     private Calculus integration;
-    
+    private GlueMonkey gg;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -29,6 +29,8 @@ public class MyWorld extends World
         addObject(fk, 20, 380);
         integration = new Calculus();
         addObject(integration, 100, 200);
+        gg = new GlueMonkey();
+        addObject(gg, 475, 200);
     }
 
     public void act()
