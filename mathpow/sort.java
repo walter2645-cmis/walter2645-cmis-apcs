@@ -9,7 +9,7 @@ public class sort
 {
     public static void main( String[] args )
     {
-        int[] nums = new int[] {3, 3, 5, 8, 1, 6, 9, 4, 2, 7};
+        int[] nums = new int[] {3, 3, 5, 8, 1, 6, 9, 4, 2, 7, 0, 99, 7};
         int[] ss = sort2(nums);
         for( int i = 0; i < nums.length; i++ )
         {
@@ -43,29 +43,24 @@ public class sort
 
     public static int[] sort2( int[] nums )
     {
-        int min, cur, first, dawg;
+        int min, cur, dawg;
         min = Integer.MAX_VALUE;
         cur = -1;
-        first = Integer.MIN_VALUE;
-
+        dawg = 0;
         for( int i = 0; i < nums.length; i++ )
         {
-            for( int in = 0; in < nums.length; in++ )
+            for( int in = 0 + i; in < nums.length; in++ )
             {
-                if( nums[in] < min && nums[in] >= first )
+                if( nums[in] < min )
                 {
                     min = nums[in];
                     cur = in;
                 }
             }
-            if( nums[i] != nums[cur] )
-            {
-                dawg = nums[i];
-                nums[i] = nums[cur];
-                nums[cur] = dawg;
-                first = min;
-                min = Integer.MAX_VALUE;
-            }
+            dawg = nums[i];
+            nums[i] = min;
+            nums[cur] = dawg;
+            min = Integer.MAX_VALUE;
         }
         return nums;
     }
