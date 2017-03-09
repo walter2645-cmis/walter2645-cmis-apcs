@@ -9,8 +9,8 @@ public class sort
 {
     public static void main( String[] args )
     {
-        int[] nums = new int[] {3, 3, 5, 8, 1, 6, 9, 4, 2, 7, 0, 99, 7};
-        int[] ss = sort2(nums);
+        int[] nums = new int[] {3, 3, 5, 8, 1, 6, 9, 4, 2, 0, 7, 99, 7};
+        int[] ss = bubbles(nums);
         for( int i = 0; i < nums.length; i++ )
         {
             //nums[i] = (int)(Math.random() * 10);
@@ -61,6 +61,26 @@ public class sort
             nums[i] = min;
             nums[cur] = dawg;
             min = Integer.MAX_VALUE;
+        }
+        return nums;
+    }
+    
+    public static int[] bubbles( int[] nums )
+    {
+        boolean swap = true;
+        while( swap )
+        {
+            swap = false;
+            for( int i = 0; i < nums.length - 1; i++ )
+            {
+                if( nums[i] > nums[i+1] )
+                {
+                    int doge = nums[i];
+                    nums[i] = nums[i+1];
+                    nums[i+1] = doge;
+                    swap = true;
+                }
+            }
         }
         return nums;
     }
