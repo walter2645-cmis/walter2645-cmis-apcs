@@ -11,6 +11,7 @@ public class MyWorld extends World
     private Bong Bong1, Bong2;
     private int pipe;
     private int height;
+    private int shoot;
     private Frustration fk;
     private Calculus integration;
     private GlueMonkey gg;
@@ -30,6 +31,7 @@ public class MyWorld extends World
         integration = new Calculus();
         addObject(integration, 100, 200);
         gg = new GlueMonkey();
+        shoot = 100;
         addObject(gg, 475, 200);
     }
 
@@ -44,6 +46,12 @@ public class MyWorld extends World
             int high = 400 - height - 100;
             Bong2 = new Bong(high);
             addObject(Bong2, 600, high / 2 + height + 100);
+        }
+        int monkeyX = gg.getX();
+        int monkeyY = gg.getY();
+        if( shoot < 0 )
+        {
+            shoot = 100 - 1;
         }
         pipe--;
     }

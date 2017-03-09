@@ -19,6 +19,6 @@ public class PipeCleaner extends Actor
     }
     public void act()
     {
-        removeTouching(Bong.class);
+        removeTouching(null);
     }
 }

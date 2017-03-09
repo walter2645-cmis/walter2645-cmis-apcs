@@ -24,6 +24,11 @@ public class Frustration extends Actor
         // Add your action code here.
     }
     
+    public int getHappiness()
+    {
+        return happiness;
+    }
+    
     public void increment()
     {
         happiness++;

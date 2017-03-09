@@ -15,7 +15,7 @@ public class GlueMonkey extends Actor
     public GlueMonkey()
     {
      GreenfootImage rescale = getImage();
-     rescale.scale(31, 35);
+     rescale.scale(47, 53);
     }
     int dir;
     public void act() 

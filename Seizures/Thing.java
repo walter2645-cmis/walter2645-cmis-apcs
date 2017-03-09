@@ -21,7 +21,7 @@ public class Thing extends Actor
     {
         flap();
         gravity();
-        if( isTouching( null ) || isAtEdge() )
+        if( isTouching( Bong.class ) || isAtEdge() )
         {
             Greenfoot.stop();
         }
