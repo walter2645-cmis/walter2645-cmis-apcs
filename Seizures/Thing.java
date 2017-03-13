@@ -10,6 +10,7 @@ public class Thing extends Actor
 {
     private int lipWeight = 1;
     private int botox = 0;
+    private int viscosity = 40;
     public Thing()
     {
         GreenfootImage rescale = getImage();
@@ -25,6 +26,11 @@ public class Thing extends Actor
         {
             Greenfoot.stop();
         }
+        if( isTouching( Sticky.class ) )
+        {
+            removeTouching(Sticky.class);
+            glued();
+        }
     }
     
     public void flap()
@@ -34,7 +40,7 @@ public class Thing extends Actor
             if( key.equals("space")){
                 setRotation(315);
                 lipWeight = 1;
-                setLocation(getX(), getY()-40);
+                setLocation(getX(), getY() - viscosity);
             }
         }
     }
@@ -56,5 +62,10 @@ public class Thing extends Actor
             turn(-lipWeight);
         }
         setLocation(getX(), getY()+lipWeight);
+    }
+    
+    public void glued()
+    {
+        viscosity--;
     }
 }

@@ -51,8 +51,10 @@ public class MyWorld extends World
         int monkeyY = gg.getY();
         if( shoot < 0 )
         {
-            shoot = 100 - 1;
+            shoot = 100;
+            addObject(new Sticky(), monkeyX, monkeyY);
         }
+        shoot--;
         pipe--;
     }
     
