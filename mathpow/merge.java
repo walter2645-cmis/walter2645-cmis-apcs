@@ -17,7 +17,10 @@ public class merge
     public static int[][] split(int[] cut)
     {
         int mid = cut.length / 2;
-        int[][];
+        int[] left = new int[mid];
+        int[] right = new int[mid + cut.length % 2];
+        int[][] sandwich = new int[][]{left, right};
+        
         return null;
     }
     public static int[] mergeSort(int[] juan)
@@ -26,13 +29,13 @@ public class merge
         {
             return juan;
         }
-        else
-        {
-            int[][] duality = split(juan);
-        }
-        return null;
+        int[][] duality = split(juan);
+        int[] left = mergeSort(duality[0]);
+        int[] right = mergeSort(duality[1]);
+        int[] singularity = merge(left, right);
+        return singularity;
     }
-    public static int[] merge()
+    public static int[] merge(int[] left, int[] right)
     {
         return null;
     }
