@@ -20,8 +20,15 @@ public class merge
         int[] left = new int[mid];
         int[] right = new int[mid + cut.length % 2];
         int[][] sandwich = new int[][]{left, right};
-        
-        return null;
+        for( int i = 0; i < mid; i++ )
+        {
+            left[i] = cut[i];
+        }
+        for( int i = mid; i < cut.length; i++ )
+        {
+            right[i - mid] = cut[i];
+        }
+        return sandwich;
     }
     public static int[] mergeSort(int[] juan)
     {
@@ -37,6 +44,23 @@ public class merge
     }
     public static int[] merge(int[] left, int[] right)
     {
+        int[] convergence = new int[left.length+right.length];
+        int lefti = 0;
+        int righti = 0;
+        for( int i = 0; i < convergence.length; i++ )
+        {
+            if(left[lefti] < right[righti])
+            {
+                convergence[i] = left[lefti];
+                
+                lefti++;
+            }
+            else
+            {
+                convergence[i] = right[righti];
+                righti++;
+            }
+        }
         return null;
     }
 }
