@@ -6,6 +6,8 @@ public class MyWorld extends World
     private long runningTime;
     private int level = 1;
     private int score = 0;
+    private int time;
+    private int life = 0;
     public MyWorld()
     {
         super(600, 400, 1); 
@@ -28,11 +30,17 @@ public class MyWorld extends World
     
     public void act(){
         runningTime = System.currentTimeMillis() - startTime;
-
+        time = (int)(15 -(runningTime/1000.0));
         if(getObjects(Rat.class).size() == 0){
             init(level++);
         }
-        showText(score+"  "+(int)(15 -(runningTime/1000.0)), 50, 50);
+        if( life == 3 )
+        {
+            life = 0;
+            //addObject(new ExtraGuy(), Math.abs
+        }
+        showText(score+"  "+time, 50, 50);
+        
 
     }
     
@@ -41,7 +49,10 @@ public class MyWorld extends World
         addObject(new Cheese(), x, y);
     }
 
-
+    public void ratKilled()
+    {
+        life++;
+    }
 
     public void score(){
         score++;

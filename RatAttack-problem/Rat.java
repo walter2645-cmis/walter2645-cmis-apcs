@@ -20,6 +20,7 @@ public class Rat extends Actor
             moveTowardCheese(closest);
         }
         die();
+        
     }   
 
     public void wander(){
@@ -70,7 +71,7 @@ public class Rat extends Actor
             target = null;
         }else if( cheeses.size() >= 1 ){
             target = cheeses.get(0);
-        } 
+        }
         return target;
     }
     
