@@ -4,10 +4,12 @@ public class Rat extends Actor
 {
     private int direction;
     private int eaten;
+    private boolean ate;
     public Rat(){
         direction = Greenfoot.getRandomNumber(4);
         getImage().scale(50,25);
         eaten = 0;
+        ate = false;
     }
 
     public void act() 
@@ -20,7 +22,12 @@ public class Rat extends Actor
             moveTowardCheese(closest);
         }
         die();
-        
+        if( eaten == 3 )
+        {
+            MyWorld w = (MyWorld)(getWorld());
+            w.addObject(new Rat(), getX(), getY());
+            eaten = 0;
+        }
     }   
 
     public void wander(){
@@ -81,15 +88,21 @@ public class Rat extends Actor
             World w = getWorld();
             w.removeObject(cheese);
             eaten++;
+            ate = true;
         }
     }
     
+    public boolean cheesy()
+    {
+        return ate;
+    }
     
     public void die(){
         if(isTouching(Trap.class)){
             MyWorld w = (MyWorld)getWorld();
             w.removeObject(this);
             w.score();
+            w.ratKilled();
         }
     }
 }

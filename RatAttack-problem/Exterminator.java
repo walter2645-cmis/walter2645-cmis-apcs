@@ -5,17 +5,27 @@ public class Exterminator extends Actor
     private int cheeseCount;
     private int delay;
     private boolean haveTrap;
+    private int newLife;
+    private int life;
     public Exterminator(){
         haveTrap = true;
         cheeseCount = 5;
         delay = 0;
         getImage().mirrorVertically();
         turn(180);
+        life = 0;
     }
 
     public void act() 
     {
         die();
+        MyWorld w = (MyWorld)(getWorld());
+        newLife = w.getLife();
+        if( life == 3 )
+        {
+            w.addObject(new ExtraGuy(), Math.abs(getX() - 600), Math.abs(getY() - 400 ));
+            w.setLife();
+        }
         if(Greenfoot.isKeyDown("w")){
             move(1);
         }
@@ -31,6 +41,16 @@ public class Exterminator extends Actor
         } 
     }    
 
+    public void addLife()
+    {
+        life++;
+    }
+    
+    public int getLife()
+    {
+        return life;
+    }
+    
     public void dropCheese(){
         if(cheeseCount > 0){
             MyWorld w = (MyWorld)getWorld();
