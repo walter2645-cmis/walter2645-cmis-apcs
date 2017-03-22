@@ -19,20 +19,16 @@ public class ExtraGuy extends Actor
     }
     public void act() 
     {
-        bless();
-        if( System.currentTimeMillis() > startTime + 5000 )
-        {
-            MyWorld w = (MyWorld)getWorld();
-            w.removeObject(this);
-        }
-    }
-    public void bless()
-    {
         if( isTouching(Exterminator.class) )
         {
             MyWorld w = (MyWorld)getWorld();
             w.removeObject(this);
             w.addChance();
+        }
+        else if( System.currentTimeMillis() > startTime + 5000 )
+        {
+            MyWorld w = (MyWorld)getWorld();
+            w.removeObject(this);
         }
     }
 }

@@ -25,7 +25,7 @@ public class RatDisease extends Actor
             w.removeObject(this);
             w.killRats();
         }
-        if( System.currentTimeMillis() > startTime + 5000 )
+        else if( System.currentTimeMillis() > startTime + 5000 )
         {
             MyWorld w = (MyWorld)getWorld();
             w.removeObject(this);

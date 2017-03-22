@@ -15,7 +15,7 @@ public class MyWorld extends World
     {
         super(600, 400, 1); 
         init(level);
-        now = System.currentTimeMillis() + tick * 1000;
+        now = System.currentTimeMillis();
     }
 
     public void init(int level){
@@ -30,7 +30,8 @@ public class MyWorld extends World
         addObject(e, 520, 200);
         addObject(new Trap(), 550, 200);
         startTime = System.currentTimeMillis();
-        now = System.currentTimeMillis() + tick * 1000;
+        now = System.currentTimeMillis();
+        tick = 1;
     }
 
     public void act(){
@@ -102,6 +103,7 @@ public class MyWorld extends World
         else
         {
             e.setLocation(550, 200);
+            e.sadLife();
         }
     }
 }

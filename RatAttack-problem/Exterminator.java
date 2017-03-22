@@ -21,7 +21,7 @@ public class Exterminator extends Actor
         die();
         MyWorld w = (MyWorld)(getWorld());
         newLife = w.getLife();
-        if( life == 3 )
+        if( newLife == 3 )
         {
             w.addObject(new ExtraGuy(), Math.abs(getX() - 600), Math.abs(getY() - 400 ));
             w.setLife();
@@ -44,6 +44,11 @@ public class Exterminator extends Actor
     public void addLife()
     {
         life++;
+    }
+    
+    public void sadLife()
+    {
+        life--;
     }
     
     public int getLife()
