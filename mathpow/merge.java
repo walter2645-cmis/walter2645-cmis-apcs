@@ -9,11 +9,14 @@ public class merge
 {
     public static void main( String[] args )
     {
-        int a = 3;
-        int b = 2;
-        int c = a/b;
-        System.out.println(c);
+        int[] asd = new int[]{4, 7, 2, 6, 8, 9, 2, 4, 5, 1, 3};
+        int[] sorted = mergeSort(asd);
+        for( int i : sorted )
+        {
+            System.out.print(i + " ");
+        }
     }
+
     public static int[][] split(int[] cut)
     {
         int mid = cut.length / 2;
@@ -30,6 +33,7 @@ public class merge
         }
         return sandwich;
     }
+
     public static int[] mergeSort(int[] juan)
     {
         if(juan.length == 1)
@@ -42,6 +46,7 @@ public class merge
         int[] singularity = merge(left, right);
         return singularity;
     }
+
     public static int[] merge(int[] left, int[] right)
     {
         int[] convergence = new int[left.length+right.length];
@@ -49,18 +54,30 @@ public class merge
         int righti = 0;
         for( int i = 0; i < convergence.length; i++ )
         {
-            if(left[lefti] < right[righti])
+            if( lefti < left.length && righti < right.length )
             {
-                convergence[i] = left[lefti];
-                
-                lefti++;
+                if( left[lefti] <= right[righti] )
+                {
+                    convergence[i] = left[lefti];
+                    lefti++;
+                }
+                else
+                {
+                    convergence[i] = right[righti];
+                    righti++;
+                }
             }
-            else
+            else if( lefti >= left.length && righti < right.length )
             {
                 convergence[i] = right[righti];
                 righti++;
             }
+            else if( righti >= right.length && lefti < left.length )
+            {
+                convergence[i] = left[lefti];
+                lefti++;
+            }
         }
-        return null;
+        return convergence;
     }
 }
