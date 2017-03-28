@@ -5,7 +5,7 @@ public class StupidSieve
         long num = 600851475143l;
         double rt = Math.sqrt(num);
         int rtnum = (int)(rt);
-        boolean[] sieve = new boolean[ 1000000000 ];
+        boolean[] sieve = new boolean[ 100000000 ];
         for( int index = 0; index < sieve.length; index++ )
         {
             sieve[ index ] = true;
@@ -15,7 +15,7 @@ public class StupidSieve
             if( sieve[ index ] )
             {
                 int count = 0;
-                for( int wat = (int)(Math.pow( index, 2 )) + count * index; wat < 1000000000; count++ )
+                for( int wat = (int)(Math.pow( index, 2 )) + count * index; wat < 100000000; count++ )
                 {
                     sieve[ index ] = false;
                 }//end for
