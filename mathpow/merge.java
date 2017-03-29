@@ -34,6 +34,38 @@ public class merge
         return sandwich;
     }
 
+    public static int[][] cutThree(int[] pigeons)
+    {
+        int third = pigeons.length / 3;
+        int one = 0;
+        int two = 0;
+        if( pigeons.length % 3 == 2 )
+        {
+            one++;
+            two++;
+        }
+        if( pigeons.length % 3 == 1 )
+        {
+            one++;
+        }
+        int[] uno = new int[third + one];
+        int[] dos = new int[third + two];
+        int[] tres = new int[third];
+        for( int i = 0; i < uno.length; i++ )
+        {
+            uno[i] = pigeons[i];
+        }
+        for( int i = 0; i < dos.length; i++ )
+        {
+            dos[i] = pigeons[i + uno.length];
+        }
+        for( int i = 0; i < tres.length; i++ )
+        {
+            tres[i] = pigeons[i + uno.length + dos.length];
+        }
+        return new int[][]{uno, dos, tres};
+    }
+    
     public static int[] mergeSort(int[] juan)
     {
         if(juan.length == 1)
