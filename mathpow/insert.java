@@ -21,12 +21,15 @@ public class insert
         for( int i = 0; i < nums.length; i++ )
         {
             int blood = nums[i];
-            for( int eye = i; eye > 0; eye-- )
+            for( int eye = i; eye >= 0; eye-- )
             {
-                if( blood < nums[eye - 1] )
+                if(eye == 0)
+                {
+                    nums[0] = blood;
+                }
+                else if( blood < nums[eye - 1] )
                 {
                     nums[eye] = nums[eye - 1];
-                    nums[eye - 1] = blood;
                 }
                 else
                 {

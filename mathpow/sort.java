@@ -49,7 +49,8 @@ public class sort
         dawg = 0;
         for( int i = 0; i < nums.length; i++ )
         {
-            for( int in = 0 + i; in < nums.length; in++ )
+            min = nums[i];
+            for( int in = i; in < nums.length; in++ )
             {
                 if( nums[in] < min )
                 {
@@ -60,7 +61,6 @@ public class sort
             dawg = nums[i];
             nums[i] = min;
             nums[cur] = dawg;
-            min = Integer.MAX_VALUE;
         }
         return nums;
     }
