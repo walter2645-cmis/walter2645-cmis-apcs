@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=CanMove
+comment1.params=speed
+comment1.target=void\ movement(int)
+numComments=2
