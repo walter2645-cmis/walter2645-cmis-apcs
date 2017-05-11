@@ -1,9 +1,11 @@
 #BlueJ class context
 comment0.target=Player
-comment1.params=damage
-comment1.target=void\ takeDamage(int)
-comment2.params=speed
-comment2.target=void\ movement(int)
-comment3.params=
-comment3.target=void\ act()
-numComments=4
+comment1.params=
+comment1.target=Player()
+comment2.params=damage
+comment2.target=void\ takeDamage(int)
+comment3.params=speed
+comment3.target=void\ movement(int)
+comment4.params=
+comment4.target=void\ act()
+numComments=5

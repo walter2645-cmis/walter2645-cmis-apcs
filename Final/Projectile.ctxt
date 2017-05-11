@@ -1,7 +1,9 @@
 #BlueJ class context
 comment0.target=Projectile
-comment1.params=speed
-comment1.target=void\ movement(int)
-comment2.params=
-comment2.target=void\ act()
-numComments=3
+comment1.params=x\ y\ color
+comment1.target=Projectile(int,\ int,\ java.awt.Color)
+comment2.params=speed
+comment2.target=void\ movement(int)
+comment3.params=
+comment3.target=void\ act()
+numComments=4
