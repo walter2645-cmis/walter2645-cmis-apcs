@@ -10,6 +10,7 @@ public class Projectile extends CanMove
         img.fill();
         setImage(img);
         turnTowards(x, y);
+        
     }
     public void movement(int speed)
     {
