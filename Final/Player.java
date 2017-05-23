@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.util.*;
 import java.awt.Color;
 public class Player extends CanMove implements HP
 {
@@ -24,7 +25,7 @@ public class Player extends CanMove implements HP
             MouseInfo pointer = Greenfoot.getMouseInfo();
             if( pointer != null )
             {
-                Projectile nerf = new Projectile(pointer.getX(), pointer.getY(), new Color(255, 51, 255));
+                Projectile nerf = new Projectile(pointer.getX(), pointer.getY(), new Color(255, 51, 255), 5);
                 getWorld().addObject(nerf, getX(), getY());
                 shot = spf;
             }
@@ -41,9 +42,17 @@ public class Player extends CanMove implements HP
         spf += change;
     }
 
-    public void takeDamage(int damage)
+    public void takeDamage()
     {
-
+        List<Projectile> bullets = getObjectsInRange(7, Projectile.class);
+        if( bullets.size() == 1 )
+        {
+            Projectile imhit = bullets.get(0);
+            int damage = imhit.getDamage();
+            HP -= damage;
+            MyWorld w = (MyWorld)getWorld();
+            w.removeObject(imhit);
+        }
     }
 
     public void movement(int speed)
@@ -51,24 +60,25 @@ public class Player extends CanMove implements HP
         if( Greenfoot.isKeyDown("a") )
         {
             move(-speed);
-        }//end if
+        }
         if( Greenfoot.isKeyDown("d") )
         {
             move(speed);
-        }//end if
+        }
         if( Greenfoot.isKeyDown("w") )
         {
             setLocation(getX(), getY()-speed);
-        }//end if
+        }
         if( Greenfoot.isKeyDown("s") )
         {
             setLocation(getX(), getY()+speed);
-        }//end if
+        }
     }
 
     public void act() 
     {
         movement(2);
         shoot();
+        takeDamage();
     }
 }

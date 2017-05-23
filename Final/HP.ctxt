@@ -1,7 +1,5 @@
 #BlueJ class context
 comment0.target=HP
-comment1.params=damage
-comment1.target=void\ takeDamage(int)
-comment2.params=
-comment2.target=void\ shoot()
-numComments=3
+comment1.params=
+comment1.target=void\ takeDamage()
+numComments=2
