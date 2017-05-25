@@ -9,6 +9,6 @@ public class MyWorld extends World
     public void populate()
     {
         addObject(new Player(), 300, 200);
-        addObject(new Obstacle(20, 200), 500, 200);
+        addObject(new Obstacle(20, 200, 50), 500, 200);
     }
 }

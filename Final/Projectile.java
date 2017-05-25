@@ -1,40 +1,22 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 import java.awt.Color;
-/**
- * Write a description of class Projectile here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Projectile extends Actor
-{
-    /**
-     * Act - do whatever the Projectile wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
-}
-/*
- * import greenfoot.*;
-import java.awt.Color;
-public class fProjectile extends Projectile
 {
     private GreenfootImage img;
     private int x, y;
     private boolean aim = true;
     private int damage;
-    public Projectile(int x, int y, Color color, int damage)
+    private int team;
+    private Color color;
+    public Projectile(int x, int y, Color color, int damage, int team)
     {
         img = new GreenfootImage(20, 3);
-        img.setColor(color);
-        img.fill();
-        setImage(img);
+        setImage(new GreenfootImage(1, 1));
+        this.color = color;
         this.x = x;
         this.y = y;
         this.damage = damage;
+        this.team = team;
     }
 
     public void movement(int speed)
@@ -46,6 +28,9 @@ public class fProjectile extends Projectile
     {
         if( aim )
         {
+            img.setColor(color);
+            img.fill();
+            setImage(img);
             turnTowards(x, y);
             aim = false;
         }
@@ -66,19 +51,19 @@ public class fProjectile extends Projectile
         aim();
         edgy();
     }
-    
+
     public int getDamage()
     {
         return damage;
     }
-    
+
     public void setDamage(int newDamage)
     {
         damage = newDamage;
     }
+
+    public int getTeam()
+    {
+        return team;
+    }
 }
- * 
- * 
- * 
- * 
- */

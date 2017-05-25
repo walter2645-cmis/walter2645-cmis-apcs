@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Projectile
+comment1.params=x\ y\ color\ damage\ team
+comment1.target=Projectile(int,\ int,\ java.awt.Color,\ int,\ int)
+comment2.params=speed
+comment2.target=void\ movement(int)
+comment3.params=
+comment3.target=void\ aim()
+comment4.params=
+comment4.target=void\ edgy()
+comment5.params=
+comment5.target=void\ act()
+comment6.params=
+comment6.target=int\ getDamage()
+comment7.params=newDamage
+comment7.target=void\ setDamage(int)
+comment8.params=
+comment8.target=int\ getTeam()
+numComments=9

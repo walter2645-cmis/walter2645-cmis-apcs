@@ -25,7 +25,7 @@ public class Player extends CanMove implements HP
             MouseInfo pointer = Greenfoot.getMouseInfo();
             if( pointer != null )
             {
-                Projectile nerf = new Projectile(pointer.getX(), pointer.getY(), new Color(255, 51, 255), 5);
+                Projectile nerf = new Projectile(pointer.getX(), pointer.getY(), new Color(255, 51, 255), 5, 1);
                 getWorld().addObject(nerf, getX(), getY());
                 shot = spf;
             }
@@ -48,10 +48,13 @@ public class Player extends CanMove implements HP
         if( bullets.size() == 1 )
         {
             Projectile imhit = bullets.get(0);
-            int damage = imhit.getDamage();
-            HP -= damage;
-            MyWorld w = (MyWorld)getWorld();
-            w.removeObject(imhit);
+            if( imhit.getTeam() != 1 )
+            {
+                int damage = imhit.getDamage();
+                HP -= damage;
+                MyWorld w = (MyWorld)getWorld();
+                w.removeObject(imhit);
+            }
         }
     }
 
